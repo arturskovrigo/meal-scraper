@@ -7,7 +7,6 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Recepie;
 use App\Models\Ingredient;
-
 class RecepieSeeder extends Seeder
 {
     /**
@@ -22,7 +21,19 @@ class RecepieSeeder extends Seeder
         Recepie::All()->each(function($recepie)
         {
             $ingredients = Ingredient::inRandomOrder()->take(rand(3,10))->get();
-            $recepie->ingredients()->saveMany($ingredients);
+            foreach($ingredients as $ingredient)
+            {
+                $recepie->ingredients()->save($ingredient);
+            }
+        });
+        Recepie::All()->each(function($recepie)
+        {
+            $ingredients = $recepie->ingredients;
+            foreach($ingredients as $ingredient)
+            {
+                $ingredient->pivot->amount = rand(20,300);
+                $ingredient->pivot->save();
+            }
         });
     }
 }
