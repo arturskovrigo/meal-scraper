@@ -3,7 +3,7 @@
 
 ## 1.1 Problēmas nostādne
 
-Mūsdienu 
+Sabalansētas ēdienkartes plānošana var būt sarežģīta problēma, jo ir nepieciešams ņemt vērā daudzus dažādus faktorus, piemēram, cilvēku vēlmes un uztura vajadzības, ēdiena pieejamību, izmaksas un laiku, ko var veltīt ēdiena gatavošanai. 
 
 ## 1.2 Darba merķis
 Darba rezultatā tiks izveidota vietne, kas palīdzēs cilvēkam no viņam pieejamiem porduktiem izveidot recepti, kas iekļautu savu uzturvērtību un cenu.
