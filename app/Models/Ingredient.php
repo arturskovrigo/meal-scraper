@@ -12,6 +12,6 @@ class Ingredient extends Model
     public $fillable = ['name','energy','protein','carbs','fat','sugar'];
     public function recepies()
     {
-        return $this->belongsToMany(Recepie::class);
+        return $this->belongsToMany(Recepie::class)->withPivot('amount')->withTimestamps();
     }
 }

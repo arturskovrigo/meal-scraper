@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('recepie_id');
             $table->integer('ingredient_id');
+            $table->integer('amount')->nullable();
             $table->timestamps();
         });
     }
